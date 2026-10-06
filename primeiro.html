@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: rgb(138, 43, 226);
+            color: white;
+            font: normal Arial 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="principal">Começando com o DOM</h1>
+    <p><strong>Primeiros Passos</strong></p>
+    <p>Resultado</p>
+    <div class="caixa">Clique!</div>
+    <script>
+        var corpo = document.body
+        var paragrafo = document.getElementsByTagName('p')[1]
+        var titulo = document.querySelector('h1#principal')
+        var blocodiv = document.querySelector('div.caixa')
+        
+        window.document.write(`O que está escrito no primeiro parágrafo: ${paragrafo.innerHTML}<br>`)
+        window.document.write(`O que está escrito no bloco div: ${blocodiv.innerHTML}`)
+        blocodiv.style.color = 'blue'
+        corpo.style.background = 'black'
+        corpo.style.color = 'yellow'
+        titulo.style.color = 'white'
+        window.document.querySelector('h1#principal').innerText='Introdução aos conhecimentos sobre DOM'
+    </script>
+    
+</body>
+</html> 

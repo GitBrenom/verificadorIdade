@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema Detran - Habilitação</h1>
+    Idade: <input type="number" name=" text_idade" id="txt_id">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    
+    <script>
+        function calcular(){
+            var txt_idade= Number((document.querySelector('input#txt_id')).value)
+            var res=document.querySelector('div#res')
+            var hab=Number(txt_idade.value);
+            if(txt_idade>=18){
+                res.innerHTML = `<p>Sua idade é <strong> ${txt_idade}</strong></p>`
+                res.innerHTML += `Você pode dar entrada na sua habilitação!`
+
+            }else{
+                res.innerHTML = `<p>Sua idade é <strong> ${txt_idade}</strong></p>`
+                res.innerHTML += `Você <strong> não </strong> pode dar entrada na sua habilitação!`
+
+            }
+
+        }
+    </script>
+
+</body>
+</html>

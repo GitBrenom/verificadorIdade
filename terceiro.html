@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18px Arial;
+        }
+        input{
+            font: normal 18px Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="text1" id="text1">
+    <strong>+</strong>
+    <input type="number" name="text2" id="text2">
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res">Resultado: </div>
+    <script>
+        function somar(){
+            var n1 = Number((document.getElementById('text1')).value)
+            var n2 = Number((document.querySelector('input#text2')).value) //ak ela decidiu fazer usando query apenas para fazer de outra forma
+            var res = document.getElementById('res')
+            var soma = n1+n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a: <strong> ${soma} </strong> `
+        }
+        function subtrair(){
+    var n1 = Number(document.getElementById('text1').value)
+
+    var n2 = Number(document.querySelector('input#text2').value)
+
+    var res = document.getElementById('res')
+
+    var sub = n1 - n2
+
+    res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a: <strong>${sub}</strong>`
+   
+}
+function multiplicar(){
+    var n1 = Number(document.getElementById('text1').value)
+
+    var n2 = Number(document.querySelector('input#text2').value)
+
+    var res = document.getElementById('res')
+
+    var mult = n1 * n2
+
+    res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a: <strong>${mult}</strong>`
+   
+}
+function dividir(){
+    var n1 = Number(document.getElementById('text1').value)
+
+    var n2 = Number(document.querySelector('input#text2').value)
+
+    var res = document.getElementById('res')
+
+    var divi = n1 / n2
+
+    res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a: <strong>${divi}</strong>`
+   
+}
+
+    </script>
+</body>
+</html>

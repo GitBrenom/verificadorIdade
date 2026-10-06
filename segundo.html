@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <style>
+        div#area{
+    text-align: center;
+    overflow: auto;
+    background-color: #9fe5a6;
+    font-family: 'Times New Roman', Times, serif;
+    width: 150px; 
+    height: 150px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    
+  <!--
+
+  outro metodo de fazer 
+    <div id="area" onclick="clic()" onmouseenter="entrar()" onmouseout="sair()">
+        Clique aqui!!!
+    </div>
+    -->
+
+    <div id="area" >
+        Clique aqui!!!
+    </div>
+    <!--metodo melhor de fazer -->
+    <script>
+         var a = document.querySelector('div#area')
+        a.addEventListener('click', clic)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        
+         function clic(){
+           
+            a.innerText= 'Você clicou!'
+            a.style.background = 'red'
+        
+        }
+        function entrar(){
+            a.innerText= 'Dentro'
+             a.style.background = 'rgb(33, 137, 137)'
+        }
+        function sair(){
+            a.innerText = 'Fora'
+             a.style.background = 'rgb(200, 137, 137)'
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+
+<!--
+document.querySelector 
+faz com que voce possa fazer algo com a variavel porem inves de usar elements byid  ou elementsbyname voce
+usa apenas essa porem com formas diferentes exemplo 
+
+document.querySelector('div#nomedoid')
+document.querySelector('div.nomedadiv')
+
+
+
+
+
+-->
